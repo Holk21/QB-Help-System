@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aotearoa Wide Help Tablet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="display:none">
+  <div id="tablet" class="hidden">
+    <div class="tablet-frame">
+      <div class="tablet-header">
+        <div class="title">Aotearoa Wide Help Tablet</div>
+        <button id="closeBtn" class="close-btn">✕</button>
+      </div>
+      <div class="tablet-body">
+        <aside class="sidebar">
+          <button class="tab-btn" id="welcomeTab" data-tab="Welcome">Welcome</button>
+          <button class="tab-btn" data-tab="Player">Player</button>
+          <button class="tab-btn" data-tab="Police">Police</button>
+          <button class="tab-btn" data-tab="Fire">Fire</button>
+          <button class="tab-btn" data-tab="Ambulance">Ambulance</button>
+          <button class="tab-btn" data-tab="Mechanic">Mechanic</button>
+        </aside>
+        <main class="content">
+          <div id="welcome" class="welcome hidden">
+            <img id="welcomeImage" class="welcome-img hidden" alt=""/>
+            <h1 id="welcomeTitle"></h1>
+            <p id="welcomeSub" class="welcome-sub"></p>
+            <div id="welcomeStatus" class="welcome-status">
+              <span id="welcomeTime">--:--:--</span> | 
+              <span id="welcomeDate">--/--/----</span> | 
+              Players: <span id="welcomePlayers">0</span>
+            </div>
+            <ul id="welcomeBullets" class="welcome-bullets"></ul>
+            <div id="welcomeLinks" class="welcome-links hidden">
+              <a id="discordLink" class="link-btn" href="#" target="_blank" rel="noopener">Discord</a>
+              <a id="websiteLink" class="link-btn" href="#" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+          <div id="cards" class="cards"></div>
+        </main>
+      </div>
+      <div class="tablet-footer">
+        <span>Tip: Use <strong>/help</strong> anytime.</span>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
